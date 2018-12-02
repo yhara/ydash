@@ -1,0 +1,19 @@
+h2 Projects
+
+#projects
+  - @projects.each do |proj|
+    .project
+      h3.project-name = proj.name
+      div = proj.path
+      - if proj.local_head == proj.remote_head
+        pre 
+          ' Head:
+          = proj.local_head
+      - else
+        pre 
+          ' Local:
+          = proj.local_head
+        pre
+          ' Remote:
+          = proj.remote_head
+      pre = proj.audit

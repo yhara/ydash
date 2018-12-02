@@ -1,0 +1,3 @@
+:projects:
+  - :name: "foo"
+    :path: "~/proj/foo/"
